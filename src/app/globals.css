@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-DEFAULT: #6366f1;
+  --color-brand-dark: #4f46e5;
+  --color-brand-light: #818cf8;
+  --color-brand-glow: rgba(99, 102, 241, 0.5);
+  
+  --color-accent-cyan: #06b6d4;
+  --color-accent-magenta: #d946ef;
+  
+  --color-surface-glass: rgba(255, 255, 255, 0.03);
+  
+  --font-inter: var(--font-inter); 
+  --font-outfit: var(--font-outfit);
+}
+
+:root {
+  --background: #030014;
+  --foreground: #ffffff;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  background-image:
+    radial-gradient(circle at 50% 0%, #1e1b4b 0%, transparent 40%),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(99, 102, 241, 0.1) 0%,
+      transparent 30%
+    );
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
